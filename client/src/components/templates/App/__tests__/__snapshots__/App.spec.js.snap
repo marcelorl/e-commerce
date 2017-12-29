@@ -85,7 +85,7 @@ exports[`#App template renders component 1`] = `
                 className="navbar-brand"
                 href="/"
               >
-                Totvs E-commerce
+                E-commerce
               </a>
             </NavbarBrand>
             <div

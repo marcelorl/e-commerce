@@ -51,7 +51,7 @@ class Header extends Component {
     return (
       <Navbar>
         <NavbarBrand href='/'>
-          Totvs E-commerce
+          E-commerce
         </NavbarBrand>
         <div className='d-inline-flex align-items-center'>
           <Cart className='mr-4' quantity={this.props.cartQuantity} />
