@@ -1,0 +1,5 @@
+{
+  "name": "ProductSave",
+  "main": "./ProductSave.container",
+  "private": true
+}

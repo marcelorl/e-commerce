@@ -1,0 +1,5 @@
+{
+  "name": "ProductItem",
+  "main": "./ProductItem",
+  "private": true
+}

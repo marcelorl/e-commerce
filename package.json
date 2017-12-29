@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "husky": "^0.14.3"
+  },
+  "scripts": {
+    "prepush": "cd client/ && npm run lint && CI=true npm test"
+  }
+}

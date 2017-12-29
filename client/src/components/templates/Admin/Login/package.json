@@ -1,0 +1,5 @@
+{
+  "name": "Login",
+  "main": "./Login",
+  "private": true
+}

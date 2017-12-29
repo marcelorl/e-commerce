@@ -1,0 +1,5 @@
+{
+  "name": "SaveProduct",
+  "main": "./saveProduct",
+  "private": true
+}

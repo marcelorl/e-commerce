@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#Slider renders component 1`] = `
+<Slider>
+  <Carousel
+    activeIndex={0}
+    interval={5000}
+    keyboard={true}
+    next={[Function]}
+    pause="hover"
+    previous={[Function]}
+    slide={true}
+  >
+    <div
+      className="carousel slide"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <CarouselIndicators
+        activeIndex={0}
+        items={
+          Array [
+            Object {
+              "altText": "Slide 1",
+              "caption": "",
+              "src": "slide1.jpg",
+            },
+            Object {
+              "altText": "Slide 2",
+              "caption": "",
+              "src": "slide2.png",
+            },
+            Object {
+              "altText": "Slide 3",
+              "caption": "",
+              "src": "slide3.jpg",
+            },
+          ]
+        }
+        onClickHandler={[Function]}
+      >
+        <ol
+          className="carousel-indicators"
+        >
+          <li
+            className="active"
+            key="slide1.jpgSlide 1"
+            onClick={[Function]}
+          />
+          <li
+            className=""
+            key="slide2.pngSlide 2"
+            onClick={[Function]}
+          />
+          <li
+            className=""
+            key="slide3.jpgSlide 3"
+            onClick={[Function]}
+          />
+        </ol>
+      </CarouselIndicators>
+      <div
+        className="carousel-inner"
+        role="listbox"
+      >
+        <CarouselItem
+          altText="Slide 1"
+          appear={false}
+          enter={true}
+          exit={true}
+          in={true}
+          key="slide1.jpg"
+          mountOnEnter={false}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          slide={true}
+          src="slide1.jpg"
+          tag="img"
+          timeout={600}
+          unmountOnExit={false}
+        >
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={600}
+            unmountOnExit={false}
+          >
+            <div
+              className="carousel-item active"
+            >
+              <img
+                alt="Slide 1"
+                className="d-block img-fluid"
+                src="slide1.jpg"
+              />
+              <CarouselCaption
+                captionHeader=""
+                captionText=""
+              >
+                <div
+                  className="carousel-caption d-none d-md-block"
+                >
+                  <h3 />
+                  <p />
+                </div>
+              </CarouselCaption>
+            </div>
+          </Transition>
+        </CarouselItem>
+        <CarouselItem
+          altText="Slide 2"
+          appear={false}
+          enter={true}
+          exit={true}
+          in={false}
+          key="slide2.png"
+          mountOnEnter={false}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          slide={true}
+          src="slide2.png"
+          tag="img"
+          timeout={600}
+          unmountOnExit={false}
+        >
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={false}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={600}
+            unmountOnExit={false}
+          >
+            <div
+              className="carousel-item"
+            >
+              <img
+                alt="Slide 2"
+                className="d-block img-fluid"
+                src="slide2.png"
+              />
+              <CarouselCaption
+                captionHeader=""
+                captionText=""
+              >
+                <div
+                  className="carousel-caption d-none d-md-block"
+                >
+                  <h3 />
+                  <p />
+                </div>
+              </CarouselCaption>
+            </div>
+          </Transition>
+        </CarouselItem>
+        <CarouselItem
+          altText="Slide 3"
+          appear={false}
+          enter={true}
+          exit={true}
+          in={false}
+          key="slide3.jpg"
+          mountOnEnter={false}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          slide={true}
+          src="slide3.jpg"
+          tag="img"
+          timeout={600}
+          unmountOnExit={false}
+        >
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={false}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={600}
+            unmountOnExit={false}
+          >
+            <div
+              className="carousel-item"
+            >
+              <img
+                alt="Slide 3"
+                className="d-block img-fluid"
+                src="slide3.jpg"
+              />
+              <CarouselCaption
+                captionHeader=""
+                captionText=""
+              >
+                <div
+                  className="carousel-caption d-none d-md-block"
+                >
+                  <h3 />
+                  <p />
+                </div>
+              </CarouselCaption>
+            </div>
+          </Transition>
+        </CarouselItem>
+      </div>
+      <CarouselControl
+        direction="prev"
+        directionText="Previous"
+        onClickHandler={[Function]}
+      >
+        <a
+          className="carousel-control-prev"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          <span
+            aria-hidden="true"
+            className="carousel-control-prev-icon"
+          />
+          <span
+            className="sr-only"
+          >
+            Previous
+          </span>
+        </a>
+      </CarouselControl>
+      <CarouselControl
+        direction="next"
+        directionText="Next"
+        onClickHandler={[Function]}
+      >
+        <a
+          className="carousel-control-next"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          <span
+            aria-hidden="true"
+            className="carousel-control-next-icon"
+          />
+          <span
+            className="sr-only"
+          >
+            Next
+          </span>
+        </a>
+      </CarouselControl>
+    </div>
+  </Carousel>
+</Slider>
+`;

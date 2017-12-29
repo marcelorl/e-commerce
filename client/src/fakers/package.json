@@ -1,0 +1,5 @@
+{
+  "name": "fakers",
+  "main": "./fakers.js",
+  "private": true
+}

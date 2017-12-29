@@ -1,0 +1,5 @@
+{
+  "name": "Home",
+  "main": "./Home.container",
+  "private": true
+}

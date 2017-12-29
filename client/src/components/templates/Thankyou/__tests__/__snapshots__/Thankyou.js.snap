@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#Thankyou template #onBoleto renders onBoleto template 1`] = `
+<Thankyou
+  checkout={
+    Object {
+      "status": Object {
+        "boleto_url": "http://test.com",
+        "payment_method": "boleto",
+      },
+    }
+  }
+>
+  <Container
+    tag="div"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="mb-4"
+      >
+        Obrigado por comprar em nossa loja.
+      </div>
+      <div>
+        <a
+          className="mb-4"
+          href="http://test.com"
+        >
+          Clique aqui para pagar seu boleto
+        </a>
+      </div>
+      <Link
+        replace={false}
+        to="/"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Página Principal
+        </a>
+      </Link>
+    </div>
+  </Container>
+</Thankyou>
+`;
+
+exports[`#Thankyou template #onCreditCard renders onCreditCard template 1`] = `
+<Thankyou
+  checkout={
+    Object {
+      "status": Object {
+        "payment_method": "credit_card",
+      },
+    }
+  }
+>
+  <Container
+    tag="div"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="mb-4"
+      >
+        Obrigado por comprar em nossa loja.
+      </div>
+      <Link
+        replace={false}
+        to="/"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Página Principal
+        </a>
+      </Link>
+    </div>
+  </Container>
+</Thankyou>
+`;

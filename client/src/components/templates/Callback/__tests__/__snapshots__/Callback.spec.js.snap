@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#Callback template renders component 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  position: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  animation: logo-spin infinite 20s linear;
+  -webkit-animation: logo-spin infinite 20s linear;
+}
+
+<Callback>
+  <glamorous(div)>
+    <div
+      className="glamor-1"
+    >
+      <glamorous(img)
+        alt="loading"
+        src="logo.svg"
+      >
+        <img
+          alt="loading"
+          className="glamor-0"
+          src="logo.svg"
+        />
+      </glamorous(img)>
+    </div>
+  </glamorous(div)>
+</Callback>
+`;

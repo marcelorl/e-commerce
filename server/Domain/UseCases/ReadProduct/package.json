@@ -1,0 +1,5 @@
+{
+  "name": "ReadProduct",
+  "main": "./readProduct",
+  "private": true
+}

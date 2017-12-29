@@ -1,0 +1,5 @@
+{
+  "name": "Thankyou",
+  "main": "./Thankyou.container",
+  "private": true
+}

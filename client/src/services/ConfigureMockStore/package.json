@@ -1,0 +1,5 @@
+{
+  "name": "ConfigureMockStore",
+  "main": "./ConfigureMockStore",
+  "private": true
+}

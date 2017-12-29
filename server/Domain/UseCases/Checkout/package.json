@@ -1,0 +1,5 @@
+{
+  "name": "checkout",
+  "main": "./checkout",
+  "private": true
+}

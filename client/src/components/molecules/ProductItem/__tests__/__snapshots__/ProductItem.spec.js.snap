@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#ProductItem renders component 1`] = `
+<ProductItem
+  product={
+    Object {
+      "description": "description",
+      "id": "123",
+      "image": "",
+      "name": "product",
+      "price": 100,
+    }
+  }
+>
+  <div
+    className="mt-3"
+  >
+    <Link
+      replace={false}
+      to="/product/123"
+    >
+      <a
+        href="/product/123"
+        onClick={[Function]}
+      >
+        <Card
+          tag="div"
+        >
+          <div
+            className="card"
+          >
+            <CardImg
+              src="http://localhost:1337/images/"
+              tag="img"
+              width="100%"
+            >
+              <img
+                className="card-img"
+                src="http://localhost:1337/images/"
+                width="100%"
+              />
+            </CardImg>
+            <CardBody
+              tag="div"
+            >
+              <div
+                className="card-body"
+              >
+                <CardTitle
+                  tag="h4"
+                >
+                  <h4
+                    className="card-title"
+                  >
+                    product
+                  </h4>
+                </CardTitle>
+                <CardText
+                  tag="p"
+                >
+                  <p
+                    className="card-text"
+                  >
+                    description
+                  </p>
+                </CardText>
+                <CardSubtitle
+                  tag="h6"
+                >
+                  <h6
+                    className="card-subtitle"
+                  >
+                    R$ 
+                    100.00
+                  </h6>
+                </CardSubtitle>
+              </div>
+            </CardBody>
+          </div>
+        </Card>
+      </a>
+    </Link>
+  </div>
+</ProductItem>
+`;

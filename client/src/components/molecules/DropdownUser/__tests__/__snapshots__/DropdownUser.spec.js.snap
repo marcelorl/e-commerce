@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#DropdownUser renders component 1`] = `
+<DropdownUser
+  logout={[Function]}
+  name="Name"
+>
+  <ButtonDropdown
+    isOpen={false}
+    toggle={[Function]}
+  >
+    <Dropdown
+      dropup={false}
+      group={true}
+      isOpen={false}
+      nav={false}
+      toggle={[Function]}
+    >
+      <Manager
+        className="btn-group"
+        onKeyDown={[Function]}
+        tag="div"
+      >
+        <div
+          className="btn-group"
+          onKeyDown={[Function]}
+        >
+          <DropdownToggle
+            aria-haspopup={true}
+            caret={true}
+            color="info"
+          >
+            <Target
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="dropdown-toggle"
+              color="info"
+              component={[Function]}
+              onClick={[Function]}
+            >
+              <Button
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle"
+                color="info"
+                innerRef={[Function]}
+                onClick={[Function]}
+                tag="button"
+              >
+                <button
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="dropdown-toggle btn btn-info"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Name
+                </button>
+              </Button>
+            </Target>
+          </DropdownToggle>
+          <DropdownMenu
+            flip={true}
+            tag="div"
+          >
+            <div
+              aria-hidden={true}
+              className="dropdown-menu"
+              role="menu"
+              tabIndex="-1"
+            >
+              <DropdownItem
+                onClick={[Function]}
+                tag="button"
+                toggle={true}
+              >
+                <button
+                  className="dropdown-item"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type="button"
+                >
+                  Logout
+                </button>
+              </DropdownItem>
+            </div>
+          </DropdownMenu>
+        </div>
+      </Manager>
+    </Dropdown>
+  </ButtonDropdown>
+</DropdownUser>
+`;

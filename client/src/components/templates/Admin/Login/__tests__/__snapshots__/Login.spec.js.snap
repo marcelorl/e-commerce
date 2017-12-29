@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#Login template renders component 1`] = `
+<Login
+  history={
+    Object {
+      "push": [Function],
+    }
+  }
+>
+  <Container
+    tag="div"
+  >
+    <div
+      className="container"
+    >
+      <Form
+        tag="form"
+      >
+        <form
+          className=""
+        >
+          <h1
+            className="display-4"
+          >
+            Login
+          </h1>
+          <FormGroup
+            tag="div"
+          >
+            <div
+              className="form-group"
+            >
+              <Label
+                for="username"
+                tag="label"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <label
+                  className=" form-control-label"
+                  htmlFor="username"
+                >
+                  Username
+                </label>
+              </Label>
+              <Input
+                defaultValue="admin"
+                id="username"
+                name="username"
+                placeholder="John DOe"
+                tag="p"
+                type="text"
+              >
+                <input
+                  className="form-control"
+                  defaultValue="admin"
+                  id="username"
+                  name="username"
+                  placeholder="John DOe"
+                  type="text"
+                />
+              </Input>
+            </div>
+          </FormGroup>
+          <FormGroup
+            tag="div"
+          >
+            <div
+              className="form-group"
+            >
+              <Label
+                for="password"
+                tag="label"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <label
+                  className=" form-control-label"
+                  htmlFor="password"
+                >
+                  Password
+                </label>
+              </Label>
+              <Input
+                defaultValue="123"
+                id="password"
+                name="password"
+                tag="p"
+                type="password"
+              >
+                <input
+                  className="form-control"
+                  defaultValue="123"
+                  id="password"
+                  name="password"
+                  type="password"
+                />
+              </Input>
+            </div>
+          </FormGroup>
+          <Button
+            color="success"
+            onClick={[Function]}
+            tag="button"
+          >
+            <button
+              className="btn btn-success"
+              onClick={[Function]}
+              type="button"
+            >
+              Submit
+            </button>
+          </Button>
+        </form>
+      </Form>
+    </div>
+  </Container>
+</Login>
+`;

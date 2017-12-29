@@ -1,0 +1,5 @@
+{
+  "name": "reducers",
+  "main": "./configureStore.js",
+  "private": true
+}

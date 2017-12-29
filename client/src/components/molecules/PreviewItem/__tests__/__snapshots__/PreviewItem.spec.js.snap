@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#PreviewItem renders component 1`] = `
+<PreviewItem
+  product={
+    Object {
+      "image": "",
+      "name": "product",
+      "quantity": 4,
+    }
+  }
+>
+  <tr>
+    <td
+      width="20%"
+    >
+      <CardImg
+        className="img-fluid"
+        src="http://localhost:1337/images/"
+        tag="img"
+        width="100%"
+      >
+        <img
+          className="img-fluid card-img"
+          src="http://localhost:1337/images/"
+          width="100%"
+        />
+      </CardImg>
+    </td>
+    <td>
+      product
+    </td>
+    <td>
+      4
+    </td>
+    <td>
+      R$ 
+      0.00
+    </td>
+  </tr>
+</PreviewItem>
+`;

@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#App template renders component 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  color: black;
+  font-size: 0.5rem;
+  height: 1.5rem;
+  position: relative;
+  width: 1.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  width: 100%;
+  height: 100%;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  position: absolute;
+  top: 0.6rem;
+  background: red;
+  height: 14px;
+  width: 14px;
+  line-height: 15px;
+  text-align: center;
+  right: 0;
+}
+
+<App
+  auth={
+    Object {
+      "isAuthenticated": [Function],
+    }
+  }
+  cart={
+    Object {
+      "products": Array [
+        Object {},
+        Object {},
+        Object {},
+      ],
+    }
+  }
+  logout={[Function]}
+  user={
+    Object {
+      "given_name": "test",
+    }
+  }
+>
+  <Container
+    tag="div"
+  >
+    <div
+      className="container"
+    >
+      <Header
+        auth={
+          Object {
+            "isAuthenticated": [Function],
+          }
+        }
+        cartQuantity={3}
+        onLogout={[Function]}
+        user={
+          Object {
+            "given_name": "test",
+          }
+        }
+      >
+        <Navbar
+          expand={false}
+          tag="nav"
+        >
+          <nav
+            className="navbar"
+          >
+            <NavbarBrand
+              href="/"
+              tag="a"
+            >
+              <a
+                className="navbar-brand"
+                href="/"
+              >
+                Totvs E-commerce
+              </a>
+            </NavbarBrand>
+            <div
+              className="d-inline-flex align-items-center"
+            >
+              <CartIcon
+                className="mr-4"
+                quantity={3}
+              >
+                <Link
+                  replace={false}
+                  to="/checkout"
+                >
+                  <a
+                    href="/checkout"
+                    onClick={[Function]}
+                  >
+                    <glamorous(div)
+                      className="mr-4"
+                    >
+                      <div
+                        className="glamor-2 mr-4"
+                      >
+                        <glamorous(img)
+                          src="cart.svg"
+                        >
+                          <img
+                            className="glamor-0"
+                            src="cart.svg"
+                          />
+                        </glamorous(img)>
+                        <glamorous(div)
+                          className="rounded-circle"
+                        >
+                          <div
+                            className="glamor-1 rounded-circle"
+                          >
+                            3
+                          </div>
+                        </glamorous(div)>
+                      </div>
+                    </glamorous(div)>
+                  </a>
+                </Link>
+              </CartIcon>
+              <DropdownUser
+                logout={[Function]}
+                name="test"
+              >
+                <ButtonDropdown
+                  isOpen={false}
+                  toggle={[Function]}
+                >
+                  <Dropdown
+                    dropup={false}
+                    group={true}
+                    isOpen={false}
+                    nav={false}
+                    toggle={[Function]}
+                  >
+                    <Manager
+                      className="btn-group"
+                      onKeyDown={[Function]}
+                      tag="div"
+                    >
+                      <div
+                        className="btn-group"
+                        onKeyDown={[Function]}
+                      >
+                        <DropdownToggle
+                          aria-haspopup={true}
+                          caret={true}
+                          color="info"
+                        >
+                          <Target
+                            aria-expanded={false}
+                            aria-haspopup={true}
+                            className="dropdown-toggle"
+                            color="info"
+                            component={[Function]}
+                            onClick={[Function]}
+                          >
+                            <Button
+                              aria-expanded={false}
+                              aria-haspopup={true}
+                              className="dropdown-toggle"
+                              color="info"
+                              innerRef={[Function]}
+                              onClick={[Function]}
+                              tag="button"
+                            >
+                              <button
+                                aria-expanded={false}
+                                aria-haspopup={true}
+                                className="dropdown-toggle btn btn-info"
+                                onClick={[Function]}
+                                type="button"
+                              >
+                                test
+                              </button>
+                            </Button>
+                          </Target>
+                        </DropdownToggle>
+                        <DropdownMenu
+                          flip={true}
+                          tag="div"
+                        >
+                          <div
+                            aria-hidden={true}
+                            className="dropdown-menu"
+                            role="menu"
+                            tabIndex="-1"
+                          >
+                            <DropdownItem
+                              onClick={[Function]}
+                              tag="button"
+                              toggle={true}
+                            >
+                              <button
+                                className="dropdown-item"
+                                onClick={[Function]}
+                                tabIndex="0"
+                                type="button"
+                              >
+                                Logout
+                              </button>
+                            </DropdownItem>
+                          </div>
+                        </DropdownMenu>
+                      </div>
+                    </Manager>
+                  </Dropdown>
+                </ButtonDropdown>
+              </DropdownUser>
+            </div>
+          </nav>
+        </Navbar>
+      </Header>
+      <div>
+        Fixture ain't afraid of JSX
+      </div>
+    </div>
+  </Container>
+</App>
+`;

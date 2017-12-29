@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#ProductList template renders component 1`] = `
+<ProductList
+  history={
+    Object {
+      "push": [Function],
+    }
+  }
+  product={
+    Object {
+      "list": Array [
+        Object {
+          "description": "description",
+          "id": "123",
+          "image": "",
+          "name": "product",
+          "price": 100,
+        },
+        Object {
+          "description": "description",
+          "id": "123",
+          "image": "",
+          "name": "product",
+          "price": 100,
+        },
+        Object {
+          "description": "description",
+          "id": "123",
+          "image": "",
+          "name": "product",
+          "price": 100,
+        },
+        Object {
+          "description": "description",
+          "id": "123",
+          "image": "",
+          "name": "product",
+          "price": 100,
+        },
+      ],
+    }
+  }
+>
+  <Container
+    tag="div"
+  >
+    <div
+      className="container"
+    >
+      <h1
+        className="display-4"
+      >
+        Product List
+      </h1>
+      <div
+        className="clearfix"
+      >
+        <Button
+          className="float-right"
+          color="primary"
+          onClick={[Function]}
+          tag="button"
+        >
+          <button
+            className="float-right btn btn-primary"
+            onClick={[Function]}
+            type="button"
+          >
+            Add New Product
+          </button>
+        </Button>
+      </div>
+      <br />
+      <Table
+        responsiveTag="div"
+        tag="table"
+      >
+        <table
+          className="table"
+        >
+          <thead>
+            <tr>
+              <th>
+                Name
+              </th>
+              <th>
+                Description
+              </th>
+              <th>
+                Price
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              key="0"
+            >
+              <td>
+                product
+              </td>
+              <td>
+                description
+              </td>
+              <td>
+                R$ 
+                100.00
+              </td>
+            </tr>
+            <tr
+              key="1"
+            >
+              <td>
+                product
+              </td>
+              <td>
+                description
+              </td>
+              <td>
+                R$ 
+                100.00
+              </td>
+            </tr>
+            <tr
+              key="2"
+            >
+              <td>
+                product
+              </td>
+              <td>
+                description
+              </td>
+              <td>
+                R$ 
+                100.00
+              </td>
+            </tr>
+            <tr
+              key="3"
+            >
+              <td>
+                product
+              </td>
+              <td>
+                description
+              </td>
+              <td>
+                R$ 
+                100.00
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </Table>
+    </div>
+  </Container>
+</ProductList>
+`;
