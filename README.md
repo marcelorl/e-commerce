@@ -1,5 +1,11 @@
 # Desafio FullStack Developer - Marcelo Rizzardo Lima
 
+[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
+
+### Overview
+
+E-commerce application of how I think it should be developed. It has a lot to grow.
+
 ### Features
  - Create-react-app (boilerplate)
  - Docker
