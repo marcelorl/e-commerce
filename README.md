@@ -49,5 +49,7 @@
 
   Client:
   
-    `cd client/ && yarn test`
-    `cd client/ && yarn coverage`
+  ```
+  cd client/ && yarn test
+  cd client/ && yarn coverage
+  ```
