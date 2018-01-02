@@ -6,6 +6,8 @@ services:
     volumes:
       - /var/lib/mysql
     restart: always
+    networks:
+      - webnet
     environment:
       MYSQL_ROOT_PASSWORD: masterpassword
       MYSQL_DATABASE: database
@@ -17,6 +19,8 @@ services:
     command: "yarn start"
     depends_on:
       - server
+    networks:
+      - webnet
     build: ./client
     volumes:
       - ./client:/project
@@ -28,10 +32,13 @@ services:
   server:
     depends_on:
       - db
-    command: "yarn start"
     build: ./server
+    networks:
+      - webnet
     volumes:
       - ./server:/project
+    links:
+      - db
     ports:
       - 1337:1337
     environment:
@@ -39,11 +46,20 @@ services:
       DB_DATABASE: database
       DB_USER: root
       DB_PASSWORD: masterpassword
+      DB_HOST: db
+      DB_PORT: 3306
 
-  nginx:
-    image: nginx
-    ports:
-      - 8080:8080
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./client/build:/usr/share/nginx/html
+#  nginx:
+#    image: nginx
+#    volumes:
+#      - ./nginx/config.template:/etc/nginx/conf.d/config.template
+#    ports:
+#      - "1337:80"
+#    networks:
+#      - webnet
+#    depends_on:
+#      - server
+#    command: /bin/bash -c "envsubst < /etc/nginx/conf.d/config.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+
+networks:
+  webnet:
