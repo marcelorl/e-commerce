@@ -64,7 +64,7 @@ class Product extends PureComponent {
             </Media>
           </Media>
 
-          <Col>
+          <Col lg='12'>
             <Form className='mt-4 mb-4' inline>
               <FormGroup>
                 <Input

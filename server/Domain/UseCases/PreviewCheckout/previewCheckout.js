@@ -27,6 +27,8 @@ const ListProduct = async (ids, injection) => {
 
     return result;
   } catch (err) {
+    console.log('PreviewCheckout Error -> ', err);
+
     return new Error(err);
   }
 

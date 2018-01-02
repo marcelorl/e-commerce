@@ -3,7 +3,7 @@
 module.exports = {
   up: function (queryInterface, Sequelize) {
     const columns = {
-      productId: {
+      id: {
         type: Sequelize.UUID,
         primaryKey: true
       },

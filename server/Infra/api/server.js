@@ -11,6 +11,12 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(compression());
 
+app.use('/health', (req, res) => {
+  res.send({
+    status: 'OK'
+  });
+});
+
 app.use('/api', router);
 
 app.use('/images', express.static(path.resolve(__dirname, '../../uploads')));

@@ -10,6 +10,10 @@ class ProductSave extends Component {
     this.onChange = this.onChange.bind(this);
     this.onFileChange = this.onFileChange.bind(this);
     this.onSave = this.onSave.bind(this);
+
+    this.state = {
+      factor: 'A'
+    };
   }
 
   onCancel () {
