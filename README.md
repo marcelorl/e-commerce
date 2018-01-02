@@ -37,8 +37,8 @@ E-commerce application of how I think it should be developed. It has a lot to gr
 ### Uso
 
  - Para acessar o site:
-  http://localhost:3000
-  http://localhost:3000/admin -> para cadastrar produtos na loja
+   - http://localhost:3000
+   - http://localhost:3000/admin -> para cadastrar produtos na loja
   
  - Server 
   http://localhost:1337
