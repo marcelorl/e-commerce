@@ -37,8 +37,7 @@
     "coverage": "npm test -- --coverage",
     "eject": "react-scripts eject",
     "lint": "semistandard \"src/**/*.js\" --fix --verbose | snazzy",
-    "cosmos": "cosmos",
-    "cosmos:export": "cosmos-export"
+    "cosmos": "cosmos"
   },
   "devDependencies": {
     "babel-eslint": "^8.1.1",
