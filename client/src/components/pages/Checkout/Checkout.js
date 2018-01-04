@@ -10,7 +10,7 @@ import { calcShipping } from '../../../actions/shipping';
 import CheckoutTemplate from '../../templates/Checkout';
 
 class Checkout extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -23,24 +23,24 @@ class Checkout extends Component {
     this.onChange = this.onChange.bind(this);
   }
 
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps(nextProps) {
     this.setState({
       cart: nextProps.checkout,
       shipping: nextProps.shipping
     });
   }
 
-  async componentDidMount () {
+  async componentDidMount() {
     const { fetchCheckout } = this.props;
 
     await fetchCheckout();
   }
 
-  onCepSearch () {
+  onCepSearch() {
     this.props.calcShipping(this.state.cep);
   }
 
-  onChange (el) {
+  onChange(el) {
     const { name, value } = el.target;
 
     this.setState({
@@ -48,12 +48,9 @@ class Checkout extends Component {
     });
   }
 
-  render () {
+  render() {
     return (
-      <CheckoutTemplate
-        onChange={this.onChange}
-        onCepSearch={this.onCepSearch}
-        {...this.state} />
+      <CheckoutTemplate onChange={this.onChange} onCepSearch={this.onCepSearch} {...this.state} />
     );
   }
 }
@@ -70,14 +67,18 @@ Checkout.propTypes = {
 };
 
 const mapStateToProps = state =>
-  (Object.assign({
+  Object.assign({
     checkout: get(state, 'checkout', {}),
     shipping: get(state, 'shipping', {})
-  }));
+  });
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  calcShipping,
-  fetchCheckout
-}, dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      calcShipping,
+      fetchCheckout
+    },
+    dispatch
+  );
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Checkout));

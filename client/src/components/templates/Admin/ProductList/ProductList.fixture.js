@@ -8,12 +8,7 @@ export default {
       push: () => console.log('')
     },
     product: {
-      list: [
-        product,
-        product,
-        product,
-        product
-      ]
+      list: [product, product, product, product]
     }
   }
 };

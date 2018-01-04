@@ -4,11 +4,11 @@ import formatCurrency from 'format-currency';
 
 const addNewProductOnClick = history => history.push('/admin/product/save');
 
-const ProductList = ({ history, product: { list } }) =>
+const ProductList = ({ history, product: { list } }) => (
   <Container>
-    <h1 className='display-4'>Product List</h1>
-    <div className='clearfix'>
-      <Button className='float-right' color='primary' onClick={() => addNewProductOnClick(history)}>
+    <h1 className="display-4">Product List</h1>
+    <div className="clearfix">
+      <Button className="float-right" color="primary" onClick={() => addNewProductOnClick(history)}>
         Add New Product
       </Button>
     </div>
@@ -22,15 +22,16 @@ const ProductList = ({ history, product: { list } }) =>
         </tr>
       </thead>
       <tbody>
-        {list.map((product, key) =>
+        {list.map((product, key) => (
           <tr key={key}>
             <td>{product.name}</td>
             <td>{product.description}</td>
             <td>R$ {formatCurrency(product.price)}</td>
           </tr>
-        )}
+        ))}
       </tbody>
     </Table>
-  </Container>;
+  </Container>
+);
 
 export default ProductList;

@@ -1,12 +1,5 @@
 import configureMockStore from '../../services/ConfigureMockStore/configureMockStore';
-import {
-  cardFaker,
-  shippingFaker,
-  userFaker,
-  success,
-  err,
-  dataFaker
-} from '../../fakers';
+import { cardFaker, shippingFaker, userFaker, success, err, dataFaker } from '../../fakers';
 import {
   checkoutListFailAction,
   checkoutListProductAction,
@@ -14,7 +7,6 @@ import {
   paymentSuccessAction,
   fetchCheckout,
   onPayment,
-
   CHECKOUT_LIST_FAIL_FETCH,
   CHECKOUT_LIST_REQUEST_FETCH,
   CHECKOUT_LIST_SUCCESS_FETCH,
@@ -92,7 +84,7 @@ describe('#checkout', () => {
           { type: CHECKOUT_LIST_SUCCESS_FETCH, data: success }
         ];
 
-        await store.dispatch(fetchCheckout({axios}));
+        await store.dispatch(fetchCheckout({ axios }));
 
         expect(store.getActions()).toEqual(expectedActions);
         expect(axios.get).toBeCalledWith('/checkout/preview', { params: { ids: card.products } });
@@ -112,21 +104,22 @@ describe('#checkout', () => {
 
     describe('#onPayment', () => {
       const axios = {
-        post: jest
-          .fn()
-          .mockImplementationOnce(() => Promise.resolve({ data: success }))
+        post: jest.fn().mockImplementationOnce(() => Promise.resolve({ data: success }))
       };
 
-      const expectedActions = [
-        { type: PAYMENT_SUCCESS_FETCH, data: success }
-      ];
+      const expectedActions = [{ type: PAYMENT_SUCCESS_FETCH, data: success }];
 
       it('should onPayment success', async () => {
-        await store.dispatch(onPayment({
-          addressNumber: shipping.address.number,
-          paymentMethod: '',
-          card: card
-        }, { axios }));
+        await store.dispatch(
+          onPayment(
+            {
+              addressNumber: shipping.address.number,
+              paymentMethod: '',
+              card: card
+            },
+            { axios }
+          )
+        );
 
         expect(store.getActions()).toEqual(expectedActions);
         expect(axios.post).toBeCalledWith('/checkout', {

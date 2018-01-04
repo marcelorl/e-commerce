@@ -20,9 +20,10 @@ const Loading = glamorous.img({
   animation: 'logo-spin infinite 20s linear'
 });
 
-const Callback = () =>
+const Callback = () => (
   <CallbackContainer>
-    <Loading src={loading} alt='loading' />
-  </CallbackContainer>;
+    <Loading src={loading} alt="loading" />
+  </CallbackContainer>
+);
 
 export default Callback;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 class DropdownUser extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
@@ -12,16 +12,16 @@ class DropdownUser extends React.Component {
     };
   }
 
-  toggle () {
+  toggle() {
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
     });
   }
 
-  render () {
+  render() {
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle caret color='info'>
+        <DropdownToggle caret color="info">
           {this.props.name}
         </DropdownToggle>
         <DropdownMenu>

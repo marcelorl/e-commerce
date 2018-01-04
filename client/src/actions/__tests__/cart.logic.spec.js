@@ -7,7 +7,7 @@ describe('#actions', () => {
     const quantityToBeAdded = 3;
 
     it('should create an action to add to cart', () => {
-      const expectedAction = [ '123', '123', '123' ];
+      const expectedAction = ['123', '123', '123'];
 
       expect(createProductIdsList(productIdToBeAdded, quantityToBeAdded)).toEqual(expectedAction);
     });

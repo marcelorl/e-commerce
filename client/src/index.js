@@ -7,9 +7,4 @@ import store from './reducers';
 
 const routes = makeMainRoutes();
 
-ReactDOM.render(
-  <Provider store={store}>
-    {routes}
-  </Provider>,
-  document.getElementById('root')
-);
+ReactDOM.render(<Provider store={store}>{routes}</Provider>, document.getElementById('root'));

@@ -10,7 +10,9 @@ import {
 } from '../actions/product';
 
 const INITIAL_STATE = {
-  loading: false, product: {}, error: ''
+  loading: false,
+  product: {},
+  error: ''
 };
 
 const productsReducer = (state = INITIAL_STATE, action) => {

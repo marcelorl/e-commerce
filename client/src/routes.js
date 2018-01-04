@@ -19,39 +19,46 @@ import Auth from './services/Auth';
 const history = createHistory();
 const auth = new Auth();
 
-const handleAuthentication = (nextState) => {
+const handleAuthentication = nextState => {
   if (/access_token|id_token|error/.test(nextState.location.hash)) {
     auth.handleAuthentication();
   }
 };
 
 const AppRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={props => (
-    <App auth={auth}>
-      <Component {...props} />
-    </App>
-  )} />
+  <Route
+    {...rest}
+    render={props => (
+      <App auth={auth}>
+        <Component {...props} />
+      </App>
+    )}
+  />
 );
 
-export const makeMainRoutes = () =>
+export const makeMainRoutes = () => (
   <ConnectedRouter history={history}>
     <div>
-      <AppRoute exact path='/' component={Home} />
-      <Route path='/callback' render={(props) => {
-        handleAuthentication(props);
+      <AppRoute exact path="/" component={Home} />
+      <Route
+        path="/callback"
+        render={props => {
+          handleAuthentication(props);
 
-        return (
-          <App auth={auth}>
-            <Callback {...props} />
-          </App>
-        );
-      }} />
-      <AppRoute path='/product/:id' component={Product} />
-      <AppRoute path='/checkout' component={Checkout} />
-      <AppRoute path='/payment' component={Payment} />
-      <AppRoute path='/thankyou' component={Thankyou} />
-      <Route exact path='/admin' component={AdminLogin} />
-      <Route exact path='/admin/product' component={AdminProductList} />
-      <Route path='/admin/product/save' component={AdminProductSave} />
+          return (
+            <App auth={auth}>
+              <Callback {...props} />
+            </App>
+          );
+        }}
+      />
+      <AppRoute path="/product/:id" component={Product} />
+      <AppRoute path="/checkout" component={Checkout} />
+      <AppRoute path="/payment" component={Payment} />
+      <AppRoute path="/thankyou" component={Thankyou} />
+      <Route exact path="/admin" component={AdminLogin} />
+      <Route exact path="/admin/product" component={AdminProductList} />
+      <Route path="/admin/product/save" component={AdminProductSave} />
     </div>
-  </ConnectedRouter>;
+  </ConnectedRouter>
+);

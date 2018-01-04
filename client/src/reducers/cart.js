@@ -1,7 +1,4 @@
-import {
-  ADD_TO_CART,
-  CLEAN_CART
-} from '../actions/cart';
+import { ADD_TO_CART, CLEAN_CART } from '../actions/cart';
 
 const INITIAL_STATE = {
   products: []

@@ -1,19 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import formatCurrency from 'format-currency';
-import {
-  Col,
-  Container,
-  Row,
-  Media,
-  Button,
-  Form,
-  FormGroup,
-  Input
-} from 'reactstrap';
+import { Col, Container, Row, Media, Button, Form, FormGroup, Input } from 'reactstrap';
 
 class Product extends PureComponent {
-  constructor () {
+  constructor() {
     super();
 
     this.state = {
@@ -23,22 +14,19 @@ class Product extends PureComponent {
     this.addToCart = this.addToCart.bind(this);
   }
 
-  addToCart () {
-    this.props.addToCart(
-      this.props.product.product,
-      this.state.quantity
-    );
+  addToCart() {
+    this.props.addToCart(this.props.product.product, this.state.quantity);
 
     this.props.history.push('/checkout');
   }
 
-  onChange (el) {
+  onChange(el) {
     this.setState({
       quantity: el.target.value
     });
   }
 
-  render () {
+  render() {
     const { product: { loading, product } } = this.props;
 
     if (loading) {
@@ -49,31 +37,37 @@ class Product extends PureComponent {
       <Container>
         <Row>
           <Media>
-            <Col lg='3'>
-              {product.image &&
+            <Col lg="3">
+              {product.image && (
                 <Media left>
-                  <img alt={product.name} width='100%' src={`http://localhost:1337/images/${product.image}`} />
+                  <img
+                    alt={product.name}
+                    width="100%"
+                    src={`http://localhost:1337/images/${product.image}`}
+                  />
                 </Media>
-              }
+              )}
             </Col>
             <Media body>
               <Media heading>
-                {product.name} - <span className='text-danger'>R$ {formatCurrency(product.price)}</span>
+                {product.name} -{' '}
+                <span className="text-danger">R$ {formatCurrency(product.price)}</span>
               </Media>
               {product.description}
             </Media>
           </Media>
 
-          <Col lg='12'>
-            <Form className='mt-4 mb-4' inline>
+          <Col lg="12">
+            <Form className="mt-4 mb-4" inline>
               <FormGroup>
                 <Input
-                  className='mr-2'
-                  type='number'
+                  className="mr-2"
+                  type="number"
                   min={0}
-                  name='quantity'
+                  name="quantity"
                   onChange={el => this.onChange(el)}
-                  value={this.state.quantity} />
+                  value={this.state.quantity}
+                />
               </FormGroup>
               <Button onClick={this.addToCart}>Adicionar no carrinho</Button>
             </Form>

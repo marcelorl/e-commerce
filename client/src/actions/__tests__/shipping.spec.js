@@ -4,15 +4,11 @@ import {
   shippingAction,
   shippingSuccessAction,
   calcShipping,
-
   SHIPPING_FAIL_FETCH,
   SHIPPING_REQUEST_FETCH,
   SHIPPING_SUCCESS_FETCH
 } from '../shipping';
-import {
-  err,
-  success
-} from '../../fakers';
+import { err, success } from '../../fakers';
 
 const cep = '123';
 

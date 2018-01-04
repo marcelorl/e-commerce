@@ -7,7 +7,9 @@ import {
 } from '../actions/products';
 
 const INITIAL_STATE = {
-  loading: false, list: [], error: ''
+  loading: false,
+  list: [],
+  error: ''
 };
 
 const productsReducer = (state = INITIAL_STATE, action) => {

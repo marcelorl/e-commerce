@@ -4,16 +4,11 @@ import {
   requestProducts,
   requestProductsSuccess,
   fetchProducts,
-
   PRODUCTS_FAIL_FETCH,
   PRODUCTS_REQUEST_FETCH,
   PRODUCTS_SUCCESS_FETCH
 } from '../products';
-import {
-  cardFaker,
-  err,
-  success
-} from '../../fakers';
+import { cardFaker, err, success } from '../../fakers';
 
 describe('#products', () => {
   describe('#actions', () => {

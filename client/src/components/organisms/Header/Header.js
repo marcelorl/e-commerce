@@ -10,51 +10,43 @@ const LoginButton = glamorous.div({
 });
 
 class Header extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.onLogout = this.onLogout.bind(this);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     if (!this.props.auth.isAuthenticated()) {
       this.onLogout();
     }
   }
 
-  onLogout () {
+  onLogout() {
     this.props.auth.logout();
     this.props.onLogout();
   }
 
-  renderLoginButton () {
+  renderLoginButton() {
     const { auth } = this.props;
 
     if (!auth.isAuthenticated()) {
-      return (
-        <LoginButton onClick={auth.login}>
-          Login
-        </LoginButton>
-      );
+      return <LoginButton onClick={auth.login}>Login</LoginButton>;
     }
   }
 
-  renderUserDropDown () {
+  renderUserDropDown() {
     if (this.props.auth.isAuthenticated()) {
-      return (
-        <DropdownUser logout={this.onLogout} name={this.props.user.given_name} />
-      );
+      return <DropdownUser logout={this.onLogout} name={this.props.user.given_name} />;
     }
   }
 
-  render () {
+  render() {
     return (
       <Navbar>
-        <NavbarBrand href='/'>
-          E-commerce
-        </NavbarBrand>
-        <div className='d-inline-flex align-items-center'>
-          <Cart className='mr-4' quantity={this.props.cartQuantity} />
+        <NavbarBrand href="/">E-commerce</NavbarBrand>
+        <div className="d-inline-flex align-items-center">
+          <Cart className="mr-4" quantity={this.props.cartQuantity} />
           {this.renderLoginButton()}
           {this.renderUserDropDown()}
         </div>
