@@ -2,7 +2,7 @@ import createTestContext from 'react-cosmos-test/enzyme';
 
 import fixture from '../ProductSave.fixture';
 
-const { mount, getWrapper, get } = createTestContext({ fixture });
+const {mount, getWrapper, get} = createTestContext({fixture});
 
 beforeEach(mount);
 
@@ -23,7 +23,7 @@ describe('#ProductSave template', () => {
 
     inputName.simulate('change', { target: { value: 'product 1' } });
     inputImage.simulate('change', { target: { files: [] } });
-    inputImage.simulate('change', { target: { files: ['dummyValue.something'] } });
+    inputImage.simulate('change', { target: { files: [ 'dummyValue.something' ] } });
 
     await getWrapper('.btn-success').simulate('click');
 

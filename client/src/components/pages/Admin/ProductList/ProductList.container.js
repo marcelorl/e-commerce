@@ -8,13 +8,13 @@ import { fetchProducts } from '../../../../actions/products';
 import ProductListTemplate from '../../../templates/Admin/ProductList';
 
 class ProductList extends Component {
-  async componentDidMount() {
+  async componentDidMount () {
     const { fetchProducts } = this.props;
 
     await fetchProducts();
   }
 
-  render() {
+  render () {
     return <ProductListTemplate {...this.props} />;
   }
 }
@@ -25,16 +25,12 @@ ProductList.propTypes = {
 };
 
 const mapStateToProps = state =>
-  Object.assign({
+  (Object.assign({
     product: get(state, 'products', {})
-  });
+  }));
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {
-      fetchProducts
-    },
-    dispatch
-  );
+const mapDispatchToProps = dispatch => bindActionCreators({
+  fetchProducts
+}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);

@@ -10,7 +10,7 @@ import { calcShipping } from '../../../actions/shipping';
 import PaymentTemplate from '../../templates/Payment';
 
 class Payment extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
 
     this.state = {
@@ -26,24 +26,24 @@ class Payment extends Component {
     this.onPayment = this.onPayment.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps (nextProps) {
     this.setState({
       cart: nextProps.checkout,
       shipping: nextProps.shipping
     });
   }
 
-  async componentDidMount() {
+  async componentDidMount () {
     const { fetchCheckout } = this.props;
 
     await fetchCheckout();
   }
 
-  onCepSearch() {
+  onCepSearch () {
     this.props.calcShipping(this.state.cep);
   }
 
-  onPayment(el) {
+  onPayment (el) {
     el.preventDefault();
 
     const {
@@ -63,12 +63,13 @@ class Payment extends Component {
       cvv
     };
 
-    this.props.onPayment({ cep, addressNumber, paymentMethod, card }).then(() => {
-      this.props.history.push('/thankyou');
-    });
+    this.props.onPayment({ cep, addressNumber, paymentMethod, card })
+      .then(() => {
+        this.props.history.push('/thankyou');
+      });
   }
 
-  onChange(el) {
+  onChange (el) {
     const { name, value } = el.target;
 
     this.setState({
@@ -76,14 +77,13 @@ class Payment extends Component {
     });
   }
 
-  render() {
+  render () {
     return (
       <PaymentTemplate
         onChange={this.onChange}
         onCepSearch={this.onCepSearch}
         onPayment={this.onPayment}
-        {...this.state}
-      />
+        {...this.state} />
     );
   }
 }
@@ -100,19 +100,15 @@ Payment.propTypes = {
 };
 
 const mapStateToProps = state =>
-  Object.assign({
+  (Object.assign({
     checkout: get(state, 'checkout', {}),
     shipping: get(state, 'shipping', {})
-  });
+  }));
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {
-      calcShipping,
-      fetchCheckout,
-      onPayment
-    },
-    dispatch
-  );
+const mapDispatchToProps = dispatch => bindActionCreators({
+  calcShipping,
+  fetchCheckout,
+  onPayment
+}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Payment));

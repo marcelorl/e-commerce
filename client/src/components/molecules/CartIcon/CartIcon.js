@@ -29,14 +29,13 @@ const CartQuantity = glamorous.div({
   right: 0
 });
 
-const CartIcon = ({ className, quantity }) => (
-  <Link to="/checkout">
+const CartIcon = ({ className, quantity }) =>
+  <Link to='/checkout'>
     <CartContainer className={className}>
       <CartImage src={cartSvg} />
-      <CartQuantity className="rounded-circle">{quantity}</CartQuantity>
+      <CartQuantity className='rounded-circle'>{quantity}</CartQuantity>
     </CartContainer>
-  </Link>
-);
+  </Link>;
 
 CartIcon.propTypes = {
   className: PropTypes.string.isRequired,

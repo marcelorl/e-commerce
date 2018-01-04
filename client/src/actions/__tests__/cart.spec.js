@@ -4,6 +4,7 @@ import {
   cleanCartAction,
   addToCart,
   cleanCart,
+
   ADD_TO_CART,
   CLEAN_CART
 } from '../cart';
@@ -38,22 +39,24 @@ describe('#cart', () => {
     });
 
     describe('#addToCart', () => {
-      const expectedActions = [{ type: ADD_TO_CART, productIdsList: [] }];
+      const expectedActions = [
+        { type: ADD_TO_CART, productIdsList: [] }
+      ];
 
       it('should addToCart success', async () => {
-        await store.dispatch(
-          addToCart({
-            product: 1,
-            quantity: 1
-          })
-        );
+        await store.dispatch(addToCart({
+          product: 1,
+          quantity: 1
+        }));
 
         expect(store.getActions()).toEqual(expectedActions);
       });
     });
 
     describe('#cleanCart', () => {
-      const expectedActions = [{ type: CLEAN_CART }];
+      const expectedActions = [
+        { type: CLEAN_CART }
+      ];
 
       it('should cleanCart success', async () => {
         await store.dispatch(cleanCart());

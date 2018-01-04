@@ -4,23 +4,20 @@ import MaskedInput from 'react-text-mask';
 import { Button } from 'reactstrap';
 
 class Shipping extends PureComponent {
-  render() {
+  render () {
     const { cep, onChange, onSubmit } = this.props;
 
     return (
-      <div className="d-flex">
+      <div className='d-flex'>
         <MaskedInput
-          name="cep"
+          name='cep'
           mask={[/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/, /[0-9]/]}
-          className="mr-2 form-control"
-          placeholder="cep"
+          className='mr-2 form-control'
+          placeholder='cep'
           required
           onChange={onChange}
-          value={cep}
-        />
-        <Button type="button" onClick={onSubmit}>
-          Procurar
-        </Button>
+          value={cep} />
+        <Button type='button' onClick={onSubmit}>Procurar</Button>
       </div>
     );
   }

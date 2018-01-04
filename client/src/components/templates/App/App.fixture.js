@@ -4,7 +4,9 @@ import App from './App';
 export default {
   component: App,
   url: '/',
-  children: <div>Fixture ain't afraid of JSX</div>,
+  children: (
+    <div>Fixture ain't afraid of JSX</div>
+  ),
   props: {
     auth: {
       isAuthenticated: () => true

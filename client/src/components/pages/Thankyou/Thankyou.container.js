@@ -7,26 +7,22 @@ import { cleanCart } from '../../../actions/cart';
 import Thankyou from '../../templates/Thankyou';
 
 class ThankyouContainer extends Component {
-  componentDidMount() {
+  componentDidMount () {
     this.props.cleanCart();
   }
 
-  render() {
+  render () {
     return <Thankyou {...this.props} />;
   }
 }
 
 const mapStateToProps = state =>
-  Object.assign({
+  (Object.assign({
     checkout: get(state, 'checkout', {})
-  });
+  }));
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {
-      cleanCart
-    },
-    dispatch
-  );
+const mapDispatchToProps = dispatch => bindActionCreators({
+  cleanCart
+}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(ThankyouContainer);

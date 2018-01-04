@@ -26,11 +26,19 @@ const reducers = combineReducers({
   user: userReducer
 });
 
-const middlewares = applyMiddleware(thunkMiddleware, loggerMiddleware, routerHistoryMiddleware);
-
-const configureStore = createStore(
-  reducers,
-  composeWithDevTools(middlewares, persistState(['cart']))
+const middlewares = applyMiddleware(
+  thunkMiddleware,
+  loggerMiddleware,
+  routerHistoryMiddleware
 );
+
+const configureStore =
+  createStore(
+    reducers,
+    composeWithDevTools(
+      middlewares,
+      persistState(['cart'])
+    )
+  );
 
 export default configureStore;

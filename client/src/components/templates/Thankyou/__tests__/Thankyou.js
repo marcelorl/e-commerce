@@ -5,7 +5,7 @@ import fixtureOnCreditCard from '../__fixtures__/onCreditCard';
 
 describe('#Thankyou template', () => {
   describe('#onBoleto', () => {
-    const { mount, getWrapper } = createTestContext({ fixture: fixtureOnBoleto });
+    const {mount, getWrapper} = createTestContext({fixture: fixtureOnBoleto});
 
     beforeEach(mount);
 
@@ -15,7 +15,7 @@ describe('#Thankyou template', () => {
   });
 
   describe('#onCreditCard', () => {
-    const { mount, getWrapper } = createTestContext({ fixture: fixtureOnCreditCard });
+    const {mount, getWrapper} = createTestContext({fixture: fixtureOnCreditCard});
 
     beforeEach(mount);
 

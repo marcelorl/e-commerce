@@ -1,6 +1,14 @@
 import configureMockStore from '../../services/ConfigureMockStore/configureMockStore';
 import { userFaker } from '../../fakers';
-import { requestLogin, requestLogout, login, logout, USER_LOGIN, USER_LOGOUT } from '../user';
+import {
+  requestLogin,
+  requestLogout,
+  login,
+  logout,
+
+  USER_LOGIN,
+  USER_LOGOUT
+} from '../user';
 
 describe('#user', () => {
   describe('#actions', () => {
@@ -33,7 +41,9 @@ describe('#user', () => {
     });
 
     describe('#addToCart', () => {
-      const expectedActions = [{ type: USER_LOGIN, user }];
+      const expectedActions = [
+        { type: USER_LOGIN, user }
+      ];
 
       it('should user login success', async () => {
         await store.dispatch(login(user));
@@ -43,7 +53,9 @@ describe('#user', () => {
     });
 
     describe('#cleanCart', () => {
-      const expectedActions = [{ type: USER_LOGOUT }];
+      const expectedActions = [
+        { type: USER_LOGOUT }
+      ];
 
       it('should user logout success', async () => {
         await store.dispatch(logout());

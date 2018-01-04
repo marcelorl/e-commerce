@@ -8,6 +8,7 @@ import {
   saveRequestProductSuccess,
   fetchProduct,
   saveProduct,
+
   PRODUCT_FAIL_FETCH,
   PRODUCT_REQUEST_FETCH,
   PRODUCT_SUCCESS_FETCH,
@@ -15,7 +16,10 @@ import {
   SAVE_REQUEST_FETCH,
   SAVE_SUCCESS_FETCH
 } from '../product';
-import { err, success } from '../../fakers';
+import {
+  err,
+  success
+} from '../../fakers';
 
 describe('#product', () => {
   describe('#actions', () => {
@@ -122,7 +126,10 @@ describe('#product', () => {
       };
 
       it('should saveProduct success', async () => {
-        const expectedActions = [{ type: SAVE_REQUEST_FETCH }, { type: SAVE_SUCCESS_FETCH }];
+        const expectedActions = [
+          { type: SAVE_REQUEST_FETCH },
+          { type: SAVE_SUCCESS_FETCH }
+        ];
 
         await store.dispatch(saveProduct(success, { axios }));
 
@@ -131,7 +138,10 @@ describe('#product', () => {
       });
 
       it('should saveProduct error', async () => {
-        const expectedActions = [{ type: SAVE_REQUEST_FETCH }, { type: SAVE_FAIL_FETCH, err }];
+        const expectedActions = [
+          { type: SAVE_REQUEST_FETCH },
+          { type: SAVE_FAIL_FETCH, err }
+        ];
 
         await store.dispatch(saveProduct(success, { axios }));
 

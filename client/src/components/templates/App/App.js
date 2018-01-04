@@ -5,16 +5,14 @@ import Header from '../../organisms/Header';
 
 import './App.css';
 
-const App = props => (
+const App = props =>
   <Container>
     <Header
       auth={props.auth}
       onLogout={props.logout}
       user={props.user}
-      cartQuantity={props.cart.products.length}
-    />
+      cartQuantity={props.cart.products.length} />
     {props.children}
-  </Container>
-);
+  </Container>;
 
 export default App;

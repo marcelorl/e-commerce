@@ -8,8 +8,7 @@ const history = createHistory({
 });
 
 export default class Auth {
-  lock = new Auth0Lock(AUTH_CONFIG.clientId, AUTH_CONFIG.domain, {
-    // eslint-disable-line
+  lock = new Auth0Lock(AUTH_CONFIG.clientId, AUTH_CONFIG.domain, { // eslint-disable-line
     oidcConformant: true,
     autoclose: true,
     auth: {
@@ -22,7 +21,7 @@ export default class Auth {
     }
   });
 
-  constructor() {
+  constructor () {
     this.handleAuthentication();
     // binds functions to keep this context
     this.login = this.login.bind(this);
@@ -30,26 +29,26 @@ export default class Auth {
     this.isAuthenticated = this.isAuthenticated.bind(this);
   }
 
-  login() {
+  login () {
     // Call the show method to display the widget.
     this.lock.show();
   }
 
-  handleAuthentication() {
+  handleAuthentication () {
     // Add a callback for Lock's `authenticated` event
     this.lock.on('authenticated', this.setSession.bind(this));
     // Add a callback for Lock's `authorization_error` event
-    this.lock.on('authorization_error', err => {
+    this.lock.on('authorization_error', (err) => {
       console.log(err);
       alert(`Error: ${err.error}. Check the console for further details.`);
       history.replace('/');
     });
   }
 
-  setSession(authResult) {
+  setSession (authResult) {
     if (authResult && authResult.accessToken && authResult.idToken) {
       // Set the time that the access token will expire at
-      let expiresAt = JSON.stringify(authResult.expiresIn * 1000 + new Date().getTime());
+      let expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
       localStorage.setItem('access_token', authResult.accessToken);
       localStorage.setItem('id_token', authResult.idToken);
       localStorage.setItem('expires_at', expiresAt);
@@ -64,14 +63,14 @@ export default class Auth {
     }
   }
 
-  logout() {
+  logout () {
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
     localStorage.removeItem('expires_at');
     localStorage.removeItem('profile');
   }
 
-  isAuthenticated() {
+  isAuthenticated () {
     // Check whether the current time is past the
     // access token's expiry time
     let expiresAt = JSON.parse(localStorage.getItem('expires_at'));

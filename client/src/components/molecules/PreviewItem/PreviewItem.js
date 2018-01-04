@@ -3,20 +3,15 @@ import PropTypes from 'prop-types';
 import formatCurrency from 'format-currency';
 import { CardImg } from 'reactstrap';
 
-const PreviewItem = ({ product }) => (
+const PreviewItem = ({product}) =>
   <tr>
-    <td width="20%">
-      <CardImg
-        className="img-fluid"
-        width="100%"
-        src={`http://localhost:1337/images/${product.image}`}
-      />
+    <td width='20%'>
+      <CardImg className='img-fluid' width='100%' src={`http://localhost:1337/images/${product.image}`} />
     </td>
     <td>{product.name}</td>
     <td>{product.quantity}</td>
     <td>R$ {formatCurrency(product.price)}</td>
-  </tr>
-);
+  </tr>;
 
 PreviewItem.propTypes = {
   product: PropTypes.shape({

@@ -6,7 +6,13 @@ export default {
   url: '/',
   props: {
     product: {
-      list: [product, product, product, product, product]
+      list: [
+        product,
+        product,
+        product,
+        product,
+        product
+      ]
     }
   }
 };

@@ -9,13 +9,13 @@ import { fetchProduct } from '../../../actions/product';
 import Product from '../../templates/Product';
 
 class ProductContainer extends Component {
-  async componentDidMount() {
+  async componentDidMount () {
     const { fetchProduct, match: { params: { id } } } = this.props;
 
     await fetchProduct(id);
   }
 
-  render() {
+  render () {
     return <Product {...this.props} />;
   }
 }
@@ -27,17 +27,13 @@ ProductContainer.propTypes = {
 };
 
 const mapStateToProps = state =>
-  Object.assign({
+  (Object.assign({
     product: get(state, 'product', {})
-  });
+  }));
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {
-      addToCart,
-      fetchProduct
-    },
-    dispatch
-  );
+const mapDispatchToProps = dispatch => bindActionCreators({
+  addToCart,
+  fetchProduct
+}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductContainer);

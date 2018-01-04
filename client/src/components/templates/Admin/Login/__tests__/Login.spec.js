@@ -2,7 +2,7 @@ import createTestContext from 'react-cosmos-test/enzyme';
 
 import fixture from '../Login.fixture';
 
-const { mount, getWrapper, get } = createTestContext({ fixture });
+const {mount, getWrapper, get} = createTestContext({fixture});
 
 beforeEach(mount);
 

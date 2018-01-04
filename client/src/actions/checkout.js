@@ -8,24 +8,28 @@ export const PAYMENT_SUCCESS_FETCH = 'PAYMENT_SUCCESS_FETCH';
 
 const dependencies = { axios };
 
-export const checkoutListFailAction = err => ({
-  type: CHECKOUT_LIST_FAIL_FETCH,
-  err
-});
+export const checkoutListFailAction = err =>
+  ({
+    type: CHECKOUT_LIST_FAIL_FETCH,
+    err
+  });
 
-export const checkoutListProductAction = () => ({
-  type: CHECKOUT_LIST_REQUEST_FETCH
-});
+export const checkoutListProductAction = () =>
+  ({
+    type: CHECKOUT_LIST_REQUEST_FETCH
+  });
 
-export const checkoutListSuccessAction = data => ({
-  type: CHECKOUT_LIST_SUCCESS_FETCH,
-  data
-});
+export const checkoutListSuccessAction = data =>
+  ({
+    type: CHECKOUT_LIST_SUCCESS_FETCH,
+    data
+  });
 
-export const paymentSuccessAction = data => ({
-  type: PAYMENT_SUCCESS_FETCH,
-  data
-});
+export const paymentSuccessAction = data =>
+  ({
+    type: PAYMENT_SUCCESS_FETCH,
+    data
+  });
 
 export const fetchCheckout = injection => {
   const { axios } = Object.assign({}, dependencies, injection);
@@ -35,8 +39,7 @@ export const fetchCheckout = injection => {
 
     const ids = getState().cart.products;
 
-    return axios
-      .get('/checkout/preview', { params: { ids } })
+    return axios.get('/checkout/preview', { params: { ids } })
       .then(products => dispatch(checkoutListSuccessAction(products)))
       .catch(err => dispatch(checkoutListFailAction(err)));
   };
@@ -60,14 +63,13 @@ export const onPayment = ({ addressNumber, paymentMethod, card }, injection) => 
       email: userState.email
     };
 
-    return axios
-      .post('/checkout', {
-        ids,
-        address,
-        user,
-        card,
-        paymentMethod
-      })
+    return axios.post('/checkout', {
+      ids,
+      address,
+      user,
+      card,
+      paymentMethod
+    })
       .then(({ data }) => dispatch(paymentSuccessAction(data)));
   };
 };
