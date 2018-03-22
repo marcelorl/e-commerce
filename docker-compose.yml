@@ -2,6 +2,7 @@ version: "3"
 
 services:
   db:
+    container_name: db
     image: mysql:latest
     volumes:
       - /var/lib/mysql
@@ -16,12 +17,14 @@ services:
       - 3306:3306
 
   client:
+    container_name: client
+    image: marcelorl/e-commerce-client:latest
     command: "yarn start"
     depends_on:
       - server
     networks:
       - webnet
-    build: ./client
+#    build: ./client
     volumes:
       - ./client:/project
     ports:
@@ -30,9 +33,11 @@ services:
       SERVER: http://localhost:1337
 
   server:
+    container_name: server
+    image: marcelorl/e-commerce-server:latest
     depends_on:
       - db
-    build: ./server
+#    build: ./server
     networks:
       - webnet
     volumes:
