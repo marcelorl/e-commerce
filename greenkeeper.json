@@ -1,0 +1,50 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "client/package.json",
+        "client/src/components/molecules/CartIcon/package.json",
+        "client/src/components/molecules/DropdownUser/package.json",
+        "client/src/components/molecules/PreviewItem/package.json",
+        "client/src/components/molecules/ProductItem/package.json",
+        "client/src/components/molecules/Slider/package.json",
+        "client/src/components/organisms/Header/package.json",
+        "client/src/components/organisms/Shipping/package.json",
+        "client/src/components/pages/Admin/Login/package.json",
+        "client/src/components/pages/Admin/ProductList/package.json",
+        "client/src/components/pages/Admin/ProductSave/package.json",
+        "client/src/components/pages/App/package.json",
+        "client/src/components/pages/Callback/package.json",
+        "client/src/components/pages/Checkout/package.json",
+        "client/src/components/pages/Home/package.json",
+        "client/src/components/pages/Payment/package.json",
+        "client/src/components/pages/Product/package.json",
+        "client/src/components/pages/Thankyou/package.json",
+        "client/src/components/templates/Admin/Login/package.json",
+        "client/src/components/templates/Admin/ProductList/package.json",
+        "client/src/components/templates/Admin/ProductSave/package.json",
+        "client/src/components/templates/App/package.json",
+        "client/src/components/templates/Callback/package.json",
+        "client/src/components/templates/Checkout/package.json",
+        "client/src/components/templates/Home/package.json",
+        "client/src/components/templates/Payment/package.json",
+        "client/src/components/templates/Product/package.json",
+        "client/src/components/templates/Thankyou/package.json",
+        "client/src/fakers/package.json",
+        "client/src/reducers/package.json",
+        "client/src/services/Auth/package.json",
+        "client/src/services/ConfigureMockStore/package.json",
+        "client/src/services/History/package.json",
+        "client/src/services/Request/package.json",
+        "package.json",
+        "server/Domain/UseCases/Checkout/package.json",
+        "server/Domain/UseCases/ListProduct/package.json",
+        "server/Domain/UseCases/PreviewCheckout/package.json",
+        "server/Domain/UseCases/ReadProduct/package.json",
+        "server/Domain/UseCases/SaveProduct/package.json",
+        "server/Domain/UseCases/Shipping/package.json",
+        "server/package.json"
+      ]
+    }
+  }
+}
